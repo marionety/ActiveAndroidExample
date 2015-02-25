@@ -8,6 +8,9 @@ android:
   components:
   - build-tools-21.1.1
 
+before_install:
+  - chmod +x gradlew
+
 # Emulator Management: Create, Start and Wait
 before_script:
   - echo no | android create avd --force -n test -t $ANDROID_TARGET --abi $ANDROID_ABI
