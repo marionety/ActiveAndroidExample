@@ -10,21 +10,20 @@ import java.util.List;
 /**
  * Created by mario on 18/02/2015.
  */
-@Table(name = "Group")
+@Table(name = "PlayerGroup")
 public class Group extends Model implements Serializable {
 
     @Column(name = "name")
     public String _name;
 
-    public List<Player> players() {
-        return getMany(Player.class, "Group");
-    }
-
     public Group() {
+        super();
         this._name = "undefined";
     }
 
     public Group(String name) {
+        super();
         this._name = name;
     }
+
 }

@@ -22,29 +22,29 @@ public class Player extends Model implements Serializable {
     @Column(name = "level")
     public int _level;
 
-    public List<Group> groups() {
-        return getMany(Group.class, "Player");
-    }
-
     public Player() {
+        super();
         this._name = "undefined";
         this._image = "undefined";
         this._level = 0;
     }
 
     public Player(String name) {
+        super();
         this._name = name;
         this._image = "undefined";
         this._level = 0;
     }
 
     public Player(String name, String image) {
+        super();
         this._name = name;
         this._image = image;
         this._level = 0;
     }
 
     public Player(String name, String image, int level) {
+        super();
         this._name = name;
         this._image = image;
         this._level = level;
